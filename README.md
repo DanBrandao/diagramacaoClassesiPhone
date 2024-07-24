@@ -1,18 +1,60 @@
-## Getting Started
+# Desafio DIO - Diagramação de Classes do iPhone
+Modelagem e diagramação da representação em UML e Código no que se refere ao componente iPhone.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 💡 Sobre o Projeto
+Utilizando o vídeo de lançamento do iPhone como base, foi produzido uma elaboração de algumas funcionalidades do iPhone utilizando ferramenta de UML para a diagramação das classes e interfaces propostas no desafio.
 
-## Folder Structure
+## ✅ Objetivo do Desafio
+Representar as interfaces para:
 
-The workspace contains two folders by default, where:
+* Repodutor Musicial: tocar, pausar, selecionarMusica
+* Aparelho Telefônico: ligar, atender, iniciarCorrerioVoz
+* Navegador na Internet: exibirPagina, adicionarNovaAba, atualizarPagina
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Diagrama UML - Mermaid
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+```mermaid
+classDiagram
+    class ReprodutorMusical {
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+    }
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+    class AparelhoTelefonico {
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
 
-## Dependency Management
+    class NavegadorInternet {
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+    class iPhone {
+        +tocar()
+        +pausar()
+        +selecionarMusica("musica")
+        +ligar("numero")
+        +atender()
+        +iniciarCorreioVoz()
+        +exibirPagina("url")
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    iPhone --> ReprodutorMusical
+    iPhone --> AparelhoTelefonico
+    iPhone --> NavegadorInternet
+```
+
+## 🔧 Tecnologias Utilizadas
+![JAVA](https://img.shields.io/badge/Java-0A0A0A?style=for-the-badge&logo=openjdk&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-0A0A0A?style=for-the-badge&logo=markdown&logoColor=white)
+![UML](https://img.shields.io/badge/UML-0A0A0A?style=for-the-badge&logo=uml&logoColor=white)
+
+## 📧 Contato
+<a href = "mailto:dpereira770@gmail.com"><img src="https://img.shields.io/badge/Gmail-0A0A0A?style=for-the-badge&logo=gmail&logoColor=white"></a>
+<a href="https://www.linkedin.com/in/daniel-brand%C3%A3o-0b024b20a/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A0A0A?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
